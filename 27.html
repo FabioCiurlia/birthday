@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&Baloo+Chettan+2:wght@800&display=swap');
+
+            body {
+      background: #61A0AF;
+      text-align: center;
+      font-family: 'Baloo Chettan 2', cursive;
+    }
+
+    .balloon {
+      display: inline-block;
+      width: 100px;
+      height: 125px;
+      background: hsl(215, 50%, 65%);
+      border-radius: 80%;
+      position: relative;
+      box-shadow: inset -10px -10px 0 rgba(0, 0, 0, 0.07);
+      margin: -20px;
+      transition: transform 0.5s ease;
+      z-index: 10;
+      animation-name: up, balloons, airgap;
+      animation-timing-function: ease-in, ease-out, ease-in 15s;
+      animation-iteration-count: 1, infinite, 1;
+      transform-origin: bottom center;
+    }
+
+    .balloon > div {
+   width:84px;
+  height:120px; 
+  border-radius:0;
+  border-radius:80% 80% 80% 80%;
+  margin: 0 auto;
+  position: absolute;
+  padding:10px;
+  -webkit-transform-origin: bottom center; 
+}
+
+
+span {
+  font-family: 'Baloo Chettan 2', cursive;
+  font-size: 4.8em;
+  color: white;
+  position: relative;
+  top: -5px;
+  left: 25%;
+  margin-left: -27px; 
+} 
+
+
+    @keyframes up {
+      from {
+        top: 100vh;
+      }
+
+      to {
+        top: 0vh;
+      }
+    }
+
+    
+
+    @keyframes balloons {
+
+      0%,
+      100% {
+        transform: rotate(-4deg);
+      }
+
+      50% {
+        transform: rotate(4deg);
+      }
+    }
+
+    .balloon:before {
+      content: "▲";
+      font-size: 20px;
+      color: hsl(215, 30%, 50%);
+      display: block;
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      bottom: -12px;
+      z-index: -100;
+    }
+
+    .balloon:after {
+      display: inline-block;
+      top: 133px;
+      position: absolute;
+      height: 80px;
+      width: 1px;
+      margin: 0 auto;
+      content: "";
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .balloon:nth-child(n-2) {
+      background: #F5D491;
+      animation-duration: 3.5s;
+    }
+
+    .balloon:nth-child(n-2):before {
+      color: #F5D491;
+    }
+
+    
+
+    .balloon:nth-child(6n-1) {
+      background: #3185FC;
+      animation-duration: 3.5s;
+    }
+
+    .balloon:nth-child(6n-1):before {
+      color: #3185FC;
+    }
+
+    .balloon:nth-child(2n-2) {
+      background: #90A959;
+      animation-duration: 3.5s;
+    }
+
+    .balloon:nth-child(2n-2):before {
+      color: #90A959;
+    }
+
+    .balloon:nth-child(3n-3) {
+      background: #F9B9B7;
+      animation-duration: 3s;
+    }
+
+    .balloon:nth-child(3n-3):before {
+      color: #F9B9B7;
+    }
+
+    .balloon:nth-child(4n-4) {
+      background: #FF70A6;
+      animation-duration: 4.5s;
+    }
+
+    .balloon:nth-child(4n-4):before {
+      color: #FF70A6;
+    }
+
+    .balloon:nth-child(5n-5) {
+      background: #ADBDFF;
+      animation-duration: 5s;
+    }
+
+    .balloon:nth-child(5n-5):before {
+      color: #ADBDFF;
+      animation-duration: 5s;
+    }
+
+    .fade-in-fwd {
+	-webkit-animation: fade-in-fwd 7.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-fwd 7.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+            transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+            transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+    </style>
+
+</head>
+<body>
+
+
+<div class="balloon"><div><span>B</span></div></div>
+<div class="balloon"><div><span>U</span></div></div>
+<div class="balloon"><div><span>O</span></div></div>
+<div class="balloon"><div><span>N</span></div></div>
+<div class="balloon"><div><span> </span></div></div>
+<div class="balloon"><div><span>2</span></div></div>
+<div class="balloon"><div><span>7</span></div></div>
+<div class="balloon"><div><span> </span></div></div>
+<div class="balloon"><div><span>A</span></div></div>
+<div class="balloon"><div><span>N</span></div></div>
+<div class="balloon"><div><span>N</span></div></div>
+<div class="balloon"><div><span>I</span></div></div>
+<div class="balloon"><div><span>V</span></div></div>
+<div class="balloon"><div><span>E</span></div></div>
+<div class="balloon"><div><span>R</span></div></div>
+<div class="balloon"><div><span>S</span></div></div>
+<div class="balloon"><div><span>A</span></div></div>
+<div class="balloon"><div><span>R</span></div></div>
+<div class="balloon"><div><span>I</span></div></div>
+<div class="balloon"><div><span>O</span></div></div>
+
+<section class="hero is-fullheight" style="background-color: #61A0AF; font-style: normal;">
+
+
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title fade-in-fwd" style="color: white; font-size: 4rem; padding: 20px;">
+        Tanti Auguri <br/>
+        Mamma e Papà!
+      </h1>
+      <h2 class="subtitle fade-in-fwd">
+        27 anni insieme
+        <section class="section">
+          <div class="container">
+            <div class="columns is-centered ">
+              <div class="column is-full is-half">
+                <figure id="cornice" class="fade-in-fwd  image is-5by4" style="border: 20px #F5D491 solid; border-radius: 10px;">
+                  <img src="./27.jpg">
+                </figure>
+              </div>
+              <div class="column is-full is-half" style="color: white">
+                <h3>Cari Mamma e Papà</h3>
+                <div><p style="width: 80%; margin: auto;">
+                  Qui ci scrivi quanto vuoi bene ai tuoi genitori e quanto il loro amore sia un modello da 
+                  perseguire
+                </p>
+                <br/>
+                <p style="text-align: start;"> Angela e Venere </p>
+              
+              </div>
+              </div>
+            </div>
+            
+          </div>
+        </section>
+
+      </h2>
+    </div>
+  </div>
+</section>
+
+</body>
+<script>
+  (function() {
+    var s = document.getElementById('cornice').style,
+        i = 0,
+        c = ['#F9B9B7', '#FF70A6', '#ADBDFF', '#90A959', '#3185FC'];
+
+    setInterval(function() {
+
+        s.borderColor = c[i];
+        i++;
+        if(i >= c.length)
+          i = 0;
+    }, 3000);
+})();
+</script>
+
+</html>
